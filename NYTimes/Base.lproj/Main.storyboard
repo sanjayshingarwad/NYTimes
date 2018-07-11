@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cDF-8x-eHl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NY Times Most Popular-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NYTimesFeedViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="70S-Jx-TI6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NYTimesTableViewCell" rowHeight="100" id="611-d4-gvO" customClass="NYTimesTableViewCell" customModule="NYTimes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="611-d4-gvO" id="OIk-3y-HUQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple" translatesAutoresizingMaskIntoConstraints="NO" id="qe2-J8-A52">
+                                                    <rect key="frame" x="15" y="25" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="UA5-Lh-0jN"/>
+                                                        <constraint firstAttribute="height" constant="50" id="hy2-M6-eeR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support of democratic candidate by the hero of adult star" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b2-Sg-1EE">
+                                                    <rect key="frame" x="75" y="5" width="290" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="TAi-rf-sOw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By David Denvaret thomas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIK-gO-v3P">
+                                                    <rect key="frame" x="75" y="47" width="290" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-09-14" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deh-8u-teH">
+                                                    <rect key="frame" x="282" y="71" width="83" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="PYi-bT-Uvr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="HGL-FY-Bzh">
+                                                    <rect key="frame" x="242" y="67" width="35" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="Gp5-tu-Eap"/>
+                                                        <constraint firstAttribute="height" constant="28" id="XyD-Xc-J6Y"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qe2-J8-A52" firstAttribute="leading" secondItem="OIk-3y-HUQ" secondAttribute="leading" constant="15" id="4XS-HZ-FAS"/>
+                                                <constraint firstItem="jIK-gO-v3P" firstAttribute="leading" secondItem="4b2-Sg-1EE" secondAttribute="leading" id="6hp-fi-r1j"/>
+                                                <constraint firstItem="jIK-gO-v3P" firstAttribute="top" secondItem="4b2-Sg-1EE" secondAttribute="bottom" constant="2" id="DHz-vD-nZ3"/>
+                                                <constraint firstItem="jIK-gO-v3P" firstAttribute="trailing" secondItem="4b2-Sg-1EE" secondAttribute="trailing" id="M2f-8o-fmL"/>
+                                                <constraint firstItem="HGL-FY-Bzh" firstAttribute="centerY" secondItem="deh-8u-teH" secondAttribute="centerY" id="MJK-lh-Oe7"/>
+                                                <constraint firstItem="deh-8u-teH" firstAttribute="top" secondItem="jIK-gO-v3P" secondAttribute="bottom" constant="2" id="SSb-Qp-Vju"/>
+                                                <constraint firstItem="deh-8u-teH" firstAttribute="leading" secondItem="HGL-FY-Bzh" secondAttribute="trailing" constant="5" id="TMG-j1-PHi"/>
+                                                <constraint firstItem="4b2-Sg-1EE" firstAttribute="leading" secondItem="qe2-J8-A52" secondAttribute="trailing" constant="10" id="VnT-CR-WRM"/>
+                                                <constraint firstAttribute="trailing" secondItem="deh-8u-teH" secondAttribute="trailing" constant="10" id="Y2o-Ay-zyJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="deh-8u-teH" secondAttribute="bottom" constant="8" id="aIZ-Ok-inM"/>
+                                                <constraint firstItem="4b2-Sg-1EE" firstAttribute="top" secondItem="OIk-3y-HUQ" secondAttribute="top" constant="5" id="dOR-q2-4yE"/>
+                                                <constraint firstItem="qe2-J8-A52" firstAttribute="centerY" secondItem="OIk-3y-HUQ" secondAttribute="centerY" id="mBh-uT-F1A"/>
+                                                <constraint firstAttribute="trailing" secondItem="4b2-Sg-1EE" secondAttribute="trailing" constant="10" id="uTD-Hc-zqD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="autherLabel" destination="jIK-gO-v3P" id="5qE-zZ-8Cm"/>
+                                            <outlet property="cellImageView" destination="qe2-J8-A52" id="Agu-gl-r52"/>
+                                            <outlet property="dateLabel" destination="deh-8u-teH" id="Mcr-qz-h1F"/>
+                                            <outlet property="titleLable" destination="4b2-Sg-1EE" id="Qf7-Ql-qwm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LQM-64-wCa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="k6W-ft-wAa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="70S-Jx-TI6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fw0-xe-2A1"/>
+                            <constraint firstItem="70S-Jx-TI6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WCn-X6-aMp"/>
+                            <constraint firstItem="70S-Jx-TI6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cLZ-2T-38r"/>
+                            <constraint firstItem="70S-Jx-TI6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="s45-et-0EO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="NY Times Most Popular" id="AWH-9a-Aev"/>
+                    <connections>
+                        <outlet property="nytimesTableView" destination="70S-Jx-TI6" id="jj5-2I-Egn"/>
+                        <segue destination="s3U-mm-N40" kind="show" identifier="pushNYTimesFeedViewControllerSegue" id="iNc-al-LUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="-570.76461769115451"/>
+        </scene>
+        <!--Times News Detail View Controller-->
+        <scene sceneID="Eak-Pa-0ue">
+            <objects>
+                <viewController id="s3U-mm-N40" customClass="NYTimesNewsDetailViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7rR-35-6hV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McS-CF-urq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="McS-CF-urq" firstAttribute="leading" secondItem="cxc-yj-bOp" secondAttribute="leading" id="Cvj-F8-p7K"/>
+                            <constraint firstItem="McS-CF-urq" firstAttribute="top" secondItem="cxc-yj-bOp" secondAttribute="top" id="Pev-73-Gvd"/>
+                            <constraint firstItem="McS-CF-urq" firstAttribute="trailing" secondItem="cxc-yj-bOp" secondAttribute="trailing" id="TUY-Tv-WPM"/>
+                            <constraint firstItem="McS-CF-urq" firstAttribute="bottom" secondItem="cxc-yj-bOp" secondAttribute="bottom" id="X5n-Zn-fW5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cxc-yj-bOp"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="McS-CF-urq" id="e9d-Hd-hjh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54i-3z-JJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2009" y="-571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="weU-N4-F4U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cDF-8x-eHl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I3W-6Q-py6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="f3V-i8-2Mf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAM-Jf-z2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.60000000000002" y="-569.86506746626696"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Apple" width="200" height="200"/>
+        <image name="calender" width="256" height="256"/>
+    </resources>
+</document>
