@@ -18,6 +18,8 @@ class NYTimesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.cellImageView.layer.cornerRadius = self.cellImageView.frame.size.width/2
+        self.cellImageView.layer.masksToBounds = true
     }
 
     func updateCellResult(news: News?) {
