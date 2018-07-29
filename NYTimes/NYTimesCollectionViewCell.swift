@@ -27,7 +27,9 @@ class NYTimesCollectionViewCell: UICollectionViewCell {
             self.titleLable.text = newsFeed.title
             self.autherLabel.text = newsFeed.byline
             self.dateLabel.text = newsFeed.published_date
-            //self.cellImageView.kf.setImage(with: news?.imageUrl)
+            if let url = news?.imageUrl {
+                self.cellImageView.kf.setImage(with: URL(string: url))
+            }
         }
     }
 }
