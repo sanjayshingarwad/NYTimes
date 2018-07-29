@@ -22,5 +22,10 @@ struct News: Decodable {
     let source: String?
     let id: Int?
     let asset_id: Int?
-
+    let imageUrl: String = "http://www.volusia.com/wp-content/uploads/2013/07/news.jpg"
 }
+
+
+
+
+

@@ -10,7 +10,7 @@ import UIKit
 
 class NYTimesFeedViewController: UIViewController {
     
-    @IBOutlet weak var nytimesTableView: UITableView!
+    @IBOutlet weak var nytimesCollectinView: UICollectionView!
     
     private let client = NewsClient()
     private var results = [News]()
@@ -43,7 +43,7 @@ class NYTimesFeedViewController: UIViewController {
             case .success(let movieFeedResult):
                 guard let newsResults = movieFeedResult?.results else { return }
                 self?.results = newsResults
-                self?.nytimesTableView.reloadData()
+                self?.nytimesCollectinView.reloadData()
                 self?.hideActivityIndicator()
             case .failure(let error):
                 print("the error \(error)")
@@ -74,28 +74,20 @@ class NYTimesFeedViewController: UIViewController {
     
 }
 
-extension NYTimesFeedViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension NYTimesFeedViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.results.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: NYTimesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "NYTimesTableViewCell", for: indexPath) as! NYTimesTableViewCell
-        cell.accessoryType = .disclosureIndicator
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: NYTimesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "NYTimesCollectionViewCell", for: indexPath) as! NYTimesCollectionViewCell
         cell.updateCellResult(news: self.results[indexPath.row])
         return cell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "pushNYTimesFeedViewControllerSegue", sender: self.results[indexPath.row])
     }
-    
 }
+
+

@@ -1,38 +1,33 @@
 //
-//  NYTimesTableViewCell.swift
+//  NYTimesCollectionViewCell.swift
 //  NYTimes
 //
-//  Created by Sanjay Shingarwad on 12/07/18.
+//  Created by Sanjay Shingarwad on 29/07/18.
 //  Copyright © 2018 Sanjay Shingarwad. All rights reserved.
 //
 
 import UIKit
+import Kingfisher
 
-class NYTimesTableViewCell: UITableViewCell {
-
+class NYTimesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var autherLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cellImageView: UIImageView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.cellImageView.layer.cornerRadius = self.cellImageView.frame.size.width/2
+        self.cellImageView.layer.cornerRadius = self.cellImageView.frame.size.width / 2
         self.cellImageView.layer.masksToBounds = true
     }
-
+    
     func updateCellResult(news: News?) {
         if let newsFeed = news {
             self.titleLable.text = newsFeed.title
             self.autherLabel.text = newsFeed.byline
             self.dateLabel.text = newsFeed.published_date
+            //self.cellImageView.kf.setImage(with: news?.imageUrl)
         }
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
